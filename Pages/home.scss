@@ -1,0 +1,35 @@
+
+
+
+page-home {
+
+    ::-webkit-scrollbar { display:none; }
+    ion-content{
+        background-color: #009384 !important;
+        background-image:url(../assets/imgs/srelogo.PNG);
+        align-content: center;
+        background-repeat: no-repeat;
+      background-position-y: 100px;
+        background-blend-mode: inherit; 
+        background-size: contain;
+        position: relative; 
+        padding-top: 300px;
+
+
+    
+       }
+ 
+  
+   
+    #topButtons{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 200px;
+
+    }
+    
+
+
+}
+
