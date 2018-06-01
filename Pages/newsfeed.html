@@ -1,0 +1,54 @@
+<!--
+  Generated template for the NewsfeedPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="panthone">
+    <ion-title>Newsfeed</ion-title>
+    <ion-buttons end (click)="notifyUser()">
+        <button>
+          <ion-icon style="zoom:2.0" (click)="notifyUser()" ios="ios-notifications-outline" md="md-notifications-outline" ></ion-icon>
+         
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <div *ngFor="let item of data">
+        <ion-card>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{item.picture.thumbnail}}">
+
+            </ion-avatar>
+            <h2> {{item.location.street}},{{item.name.last}}</h2>
+            <p>{{item.dob}}</p>
+          </ion-item>
+          <ion-card-content>
+            <p> {{item.location.street}},{{item.location.city}}
+              {{item.location.state}}.
+            </p>
+          </ion-card-content>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name ="ios-heart">
+
+                </ion-icon>
+                <div>{{item.location.postcode}} loves</div>
+              </button>
+              </ion-col>
+          </ion-row>
+
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
